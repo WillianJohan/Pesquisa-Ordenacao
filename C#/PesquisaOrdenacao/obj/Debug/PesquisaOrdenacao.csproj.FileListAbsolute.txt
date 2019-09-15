@@ -1,0 +1,10 @@
+C:\Users\willi\Documents\GitHub\UFN_PesquisaOrdenacao\C#\PesquisaOrdenacao\bin\Debug\PesquisaOrdenacao.exe.config
+C:\Users\willi\Documents\GitHub\UFN_PesquisaOrdenacao\C#\PesquisaOrdenacao\bin\Debug\PesquisaOrdenacao.exe
+C:\Users\willi\Documents\GitHub\UFN_PesquisaOrdenacao\C#\PesquisaOrdenacao\bin\Debug\PesquisaOrdenacao.pdb
+C:\Users\willi\Documents\GitHub\UFN_PesquisaOrdenacao\C#\PesquisaOrdenacao\obj\Debug\PesquisaOrdenacao.csprojAssemblyReference.cache
+C:\Users\willi\Documents\GitHub\UFN_PesquisaOrdenacao\C#\PesquisaOrdenacao\obj\Debug\PesquisaOrdenacao.Properties.Resources.resources
+C:\Users\willi\Documents\GitHub\UFN_PesquisaOrdenacao\C#\PesquisaOrdenacao\obj\Debug\PesquisaOrdenacao.csproj.GenerateResource.cache
+C:\Users\willi\Documents\GitHub\UFN_PesquisaOrdenacao\C#\PesquisaOrdenacao\obj\Debug\PesquisaOrdenacao.csproj.CoreCompileInputs.cache
+C:\Users\willi\Documents\GitHub\UFN_PesquisaOrdenacao\C#\PesquisaOrdenacao\obj\Debug\PesquisaOrdenacao.exe
+C:\Users\willi\Documents\GitHub\UFN_PesquisaOrdenacao\C#\PesquisaOrdenacao\obj\Debug\PesquisaOrdenacao.pdb
+C:\Users\willi\Documents\GitHub\UFN_PesquisaOrdenacao\C#\PesquisaOrdenacao\obj\Debug\PesquisaOrdenacao.MainWindow.resources
