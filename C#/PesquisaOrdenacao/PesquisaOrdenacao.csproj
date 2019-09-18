@@ -46,23 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainWindow.cs">
+    <Compile Include="Control\FileManager.cs" />
+    <Compile Include="View\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainWindow.Designer.cs">
+    <Compile Include="View\MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Control\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SortMethods\Bubble.cs" />
-    <Compile Include="SortMethods\Comb.cs" />
-    <Compile Include="SortMethods\Insertion.cs" />
-    <Compile Include="SortMethods\Selection.cs" />
-    <Compile Include="SortMethods\Shake.cs" />
-    <Compile Include="SortMethods\Shell.cs" />
-    <Compile Include="SortMethods\Sort.cs" />
-    <Compile Include="SortMethods\SorterSetup.cs" />
-    <EmbeddedResource Include="MainWindow.resx">
+    <Compile Include="Model\SortMethods\Bubble.cs" />
+    <Compile Include="Model\SortMethods\Comb.cs" />
+    <Compile Include="Model\SortMethods\Insertion.cs" />
+    <Compile Include="Model\SortMethods\Selection.cs" />
+    <Compile Include="Model\SortMethods\Shake.cs" />
+    <Compile Include="Model\SortMethods\Shell.cs" />
+    <Compile Include="Model\SortMethods\Sort.cs" />
+    <Compile Include="Model\SortMethods\SorterSetup.cs" />
+    <Compile Include="Model\Statistic.cs" />
+    <EmbeddedResource Include="View\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

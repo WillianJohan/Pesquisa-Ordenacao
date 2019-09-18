@@ -22,7 +22,7 @@ namespace PesquisaOrdenacao
 		}
 
 		public string getStatistic(){
-			return methodName+"@"+time+"@"+comparations+"@"+exchanges;
+			return methodName+";"+time+";"+comparations+";"+exchanges;
 		}
 	}
 }

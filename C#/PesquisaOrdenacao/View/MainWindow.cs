@@ -48,10 +48,10 @@ namespace PesquisaOrdenacao
             SortMethods.SorterSetup.setup(gerados);
             //comaca aqui
 
-            lbl_StatusBubble.Text = "Em Execucao";
             SortMethods.Comb combSort = new SortMethods.Comb();
             combSort.sort();
-            lbl_StatusBubble.Text = "Finalizado";
+
+            
         }
 
         private void MinN_ValueChanged(object sender, EventArgs e)
