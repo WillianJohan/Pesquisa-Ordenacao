@@ -1,20 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace PesquisaOrdenacao.SortMethods
 {
-    public class ShakeSort : Sort
+    public class Shake : Sort
     {
         public Shake()
         {
             MethodName = "ShakeSort";
         }
 
-        public override void sort()
+        protected override void StartSorter()
         {
             int i, ini = 0, fim = vetor.Count;
             int aux;

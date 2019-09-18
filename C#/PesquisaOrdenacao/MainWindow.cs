@@ -49,27 +49,9 @@ namespace PesquisaOrdenacao
             //comaca aqui
 
             lbl_StatusBubble.Text = "Em Execucao";
-            SortMethods.CombSort combSort = new SortMethods.CombSort();
+            SortMethods.Comb combSort = new SortMethods.Comb();
             combSort.sort();
             lbl_StatusBubble.Text = "Finalizado";
-
-
-            lbl_StatusInsertion.Text = "Em Execucao";
-            SortMethods.InsertionSort insertionSort = new SortMethods.InsertionSort();
-            insertionSort.sort();
-            lbl_StatusInsertion.Text = "Finalizado";
-            
-            lbl_StatusSelection.Text = "Em Execucao";
-            SortMethods.SelectionSort selectionSort = new SortMethods.SelectionSort();
-            selectionSort.sort();
-            lbl_StatusSelection.Text = "Finalizado";
-
-            lbl_StatusBubble.Text = "Em Execucao";
-            SortMethods.BubbleSort bubbleSort = new SortMethods.BubbleSort();
-            bubbleSort.sort();
-            lbl_StatusBubble.Text = "Finalizado";
-
-
         }
 
         private void MinN_ValueChanged(object sender, EventArgs e)

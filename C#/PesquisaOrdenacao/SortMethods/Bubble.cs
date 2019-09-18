@@ -1,20 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace PesquisaOrdenacao.SortMethods
 {
     public class Bubble : Sort
     {
-        public BubbleSort()
+        public Bubble()
         {
             MethodName = "BubbleSort";
         }
 
-        public override void sort()
+        protected override void StartSorter()
         {
             bool houveTroca;
             int i;

@@ -1,20 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace PesquisaOrdenacao.SortMethods
 {
     public class Selection : Sort
     {
-        public SelectionSort()
+        public Selection()
         {
             MethodName = "SelectionSort";
         }
 
-        public override void sort()
+        protected override void StartSorter()
         {
             int smallest_Index = 0;
             int i, j;

@@ -1,21 +1,16 @@
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PesquisaOrdenacao.SortMethods
 {
     public class Comb : Sort
     {
 
-        public CombSort()
+        public Comb()
         {
             MethodName = "CombSort";
         }
 
-        public override void sort()
+        protected override void StartSorter()
         {
             int i, distancia = vetor.Count;
             int aux;
@@ -34,7 +29,7 @@ namespace PesquisaOrdenacao.SortMethods
                         vetor[i] = vetor[i + distancia];
                         vetor[i + distancia] = aux;
                         houveTroca = true;
-                        troca++;
+                        trocas++;
                     }
                     comparacoes++;
                 }

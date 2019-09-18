@@ -1,20 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace PesquisaOrdenacao.SortMethods
 {
     public class Insertion : Sort
     {
-        public InsertionSort()
+        public Insertion()
         {
             MethodName = "InsertionSort";
         }
 
-        public override void sort()
+        protected override void StartSorter()
         {
             int aux;
             int i, j;
