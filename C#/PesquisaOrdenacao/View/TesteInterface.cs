@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PesquisaOrdenacao.View
 {
-    public partial class MainWindow : Form
+    public partial class TesteInterface : Form
     {
-        public MainWindow()
+        public TesteInterface()
         {
             InitializeComponent();
         }
