@@ -1,4 +1,4 @@
-namespace PesquisaOrdenacao.SortMethods
+namespace PesquisaOrdenacao.Model.SortMethods
 {
     public class Insertion : Sort
     {
@@ -19,12 +19,12 @@ namespace PesquisaOrdenacao.SortMethods
                 {
                     // move the entire collection to the right
                     vetor[j + 1] = vetor[j];
-                    comparacoes++;
-                    trocas++;
+                    comparisons++;
+                    exchanges++;
                 }
                 vetor[j + 1] = aux;
-                comparacoes++;
-                trocas++;
+                comparisons++;
+                exchanges++;
             }
         }
     }

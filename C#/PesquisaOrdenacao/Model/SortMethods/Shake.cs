@@ -1,4 +1,4 @@
-namespace PesquisaOrdenacao.SortMethods
+namespace PesquisaOrdenacao.Model.SortMethods
 {
     public class Shake : Sort
     {
@@ -24,9 +24,9 @@ namespace PesquisaOrdenacao.SortMethods
                         vetor[i] = vetor[i + 1];
                         vetor[i + 1] = aux;
                         houveTroca = true;
-                        trocas++;
+                        exchanges++;
                     }
-                    comparacoes++;
+                    comparisons++;
                 }
                 fim--;
                 if (!houveTroca) break;
@@ -40,9 +40,9 @@ namespace PesquisaOrdenacao.SortMethods
                         vetor[i] = vetor[i - 1];
                         vetor[i - 1] = aux;
                         houveTroca = true;
-                        trocas++;
+                        exchanges++;
                     }
-                    comparacoes++;
+                    comparisons++;
                 }
                 ini++;
 

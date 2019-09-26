@@ -1,4 +1,4 @@
-namespace PesquisaOrdenacao.SortMethods
+namespace PesquisaOrdenacao.Model.SortMethods
 {
     public class Shell : Sort
     {
@@ -26,11 +26,11 @@ namespace PesquisaOrdenacao.SortMethods
                     for (j = i - distancia; j >= 0 && aux < vetor[j]; j = j - distancia)
                     {
                         vetor[j + distancia] = vetor[j];
-                        comparacoes++;
-                        trocas++;
+                        comparisons++;
+                        exchanges++;
                     }
                     vetor[j + distancia] = aux;
-                    trocas++;
+                    exchanges++;
                 }
             } while (distancia > 1);
         }

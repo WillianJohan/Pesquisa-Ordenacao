@@ -1,6 +1,6 @@
 using System;
 
-namespace PesquisaOrdenacao.SortMethods
+namespace PesquisaOrdenacao.Model.SortMethods
 {
     public class Comb : Sort
     {
@@ -29,9 +29,9 @@ namespace PesquisaOrdenacao.SortMethods
                         vetor[i] = vetor[i + distancia];
                         vetor[i + distancia] = aux;
                         houveTroca = true;
-                        trocas++;
+                        exchanges++;
                     }
-                    comparacoes++;
+                    comparisons++;
                 }
             } while (distancia > 1 || houveTroca);
         }

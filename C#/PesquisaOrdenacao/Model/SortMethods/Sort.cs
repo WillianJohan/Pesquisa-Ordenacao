@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 
-namespace PesquisaOrdenacao.SortMethods
+namespace PesquisaOrdenacao.Model.SortMethods
 {
     public abstract class Sort
     {
         //Read all the numbers and add to the list
         private string methodName = "";
         protected List<int> vetor = new List<int>();
-        protected Int64 comparacoes = 0;
-        protected Int64 trocas = 0;
+        protected Int64 comparisons = 0;
+        protected Int64 exchanges = 0;
         protected Stopwatch sw; //Calculate the time
+        protected Statistic statistic;
         private bool isFinished = false; //Return true if the sorter is finished
 
         //Returns the name of sort method. 
@@ -43,19 +44,13 @@ namespace PesquisaOrdenacao.SortMethods
             sw = Stopwatch.StartNew();
             StartSorter();
             sw.Stop();
+            statistic = new Statistic(MethodName, sw.ElapsedMilliseconds.ToString(), comparisons.ToString(), exchanges.ToString());
             isFinished = true;
         }
 
-        public String[] getStatistics()
-        {
-            string[] information = new string[5];
-            information[0] = methodName;
-            information[1] = vetor.Count.ToString();
-            information[2] = comparacoes.ToString();
-            information[3] = trocas.ToString();
-            information[4] = sw.ElapsedMilliseconds.ToString();
-
-            return information;
+        public Statistic getStatistics()
+        {            
+            return statistic;
         }
 
         protected abstract void StartSorter();
