@@ -81,11 +81,12 @@ namespace PesquisaOrdenacao.Control
                 Stream entrada = File.Open(Path_UnsortedNumbers, FileMode.Open);
                 StreamReader leitor = new StreamReader(entrada);
                 string linha = null;
+                linha = leitor.ReadLine();
                 do
-                {
-                    linha = leitor.ReadLine();
+                {                    
                     unsorted.Add(int.Parse(linha));
-                } while (leitor.ReadLine() != null);
+                    linha = leitor.ReadLine();
+                } while (linha != null);
 
                 leitor.Close();
                 entrada.Close();

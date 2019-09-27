@@ -32,8 +32,13 @@ namespace PesquisaOrdenacao.Model.SortMethods
             sw = Stopwatch.StartNew();
             StartSorter();
             sw.Stop();
-            statistic = new Statistic(MethodName, sw.ElapsedMilliseconds.ToString(), comparisons.ToString(), exchanges.ToString());
+            statistic = new Statistic(MethodName, sw.Elapsed.ToString(), comparisons.ToString(), exchanges.ToString());
             isFinished = true;
+        }
+
+        public void Record()
+        {
+            Control.FileManager.RecordUnsortedNumbers(vetor, MethodName);
         }
 
         public Statistic getStatistics()

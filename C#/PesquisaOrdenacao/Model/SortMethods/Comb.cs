@@ -12,22 +12,23 @@ namespace PesquisaOrdenacao.Model.SortMethods
 
         protected override void StartSorter()
         {
-            int i, distancia = vetor.Count;
+            int i;
+            double distancia = vetor.Count;
             int aux;
             bool houveTroca;
             do
             {
-                distancia = (int)Math.Round(distancia / 1.3);
-                Console.WriteLine(distancia);
+                distancia = (int) distancia / 1.3;
                 if (distancia < 1) distancia = 1; //significa que virou bolha
+                //Console.WriteLine(distancia);
                 houveTroca = false;
                 for (i = 0; i + distancia < vetor.Count; i++)
                 {
-                    if (vetor[i] > vetor[i + distancia])
+                    if (vetor[i] > vetor[i + (int) distancia])
                     {
                         aux = vetor[i];
-                        vetor[i] = vetor[i + distancia];
-                        vetor[i + distancia] = aux;
+                        vetor[i] = vetor[i + (int) distancia];
+                        vetor[i + (int) distancia] = aux;
                         houveTroca = true;
                         exchanges++;
                     }
