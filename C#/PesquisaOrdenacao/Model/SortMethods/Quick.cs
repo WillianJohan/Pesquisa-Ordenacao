@@ -32,6 +32,8 @@ namespace PesquisaOrdenacao.Model.SortMethods
                 {
                     greater.Add(item);
                 }
+                exchanges++;
+                comparisons++;
             }
             List<int> sorted = quicksort(smaller);
             sorted.Add(pivotValue);

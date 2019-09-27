@@ -23,19 +23,7 @@ namespace PesquisaOrdenacao.Model.SortMethods
         public void setupList()
         {
             //Read the archive and add values in the list
-            if (File.Exists("n.txt"))
-            {
-                Stream entrada = File.Open("n.txt", FileMode.Open);
-                StreamReader leitor = new StreamReader(entrada);
-                string linha = leitor.ReadLine();
-                while (linha != null)
-                {
-                    vetor.Add(int.Parse(linha));
-                    linha = leitor.ReadLine();
-                }
-                leitor.Close();
-                entrada.Close();
-            }
+            vetor = Control.FileManager.ReadUnsortedNumbers();
         }
 
         public void sort()

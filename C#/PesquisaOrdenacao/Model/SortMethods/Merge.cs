@@ -45,8 +45,10 @@ namespace PesquisaOrdenacao.Model.SortMethods
 
             while (left.Count > 0 || right.Count > 0)
             {
+                comparisons++;
                 if (left.Count > 0 && right.Count > 0)
                 {
+                    comparisons++;
                     if (left.First() <= right.First())  //Comparing First two elements to see which is smaller
                     {
                         result.Add(left.First());
@@ -57,16 +59,20 @@ namespace PesquisaOrdenacao.Model.SortMethods
                         result.Add(right.First());
                         right.Remove(right.First());
                     }
+                    exchanges++;
                 }
                 else if (left.Count > 0)
                 {
+                    comparisons++;
+                    exchanges++;
                     result.Add(left.First());
                     left.Remove(left.First());
                 }
                 else if (right.Count > 0)
                 {
+                    comparisons++;
+                    exchanges++;
                     result.Add(right.First());
-
                     right.Remove(right.First());
                 }
             }
