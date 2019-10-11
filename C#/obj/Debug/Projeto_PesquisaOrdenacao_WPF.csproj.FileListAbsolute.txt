@@ -1,0 +1,16 @@
+C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\C#\obj\Debug\Projeto_PesquisaOrdenacao_WPF.csprojAssemblyReference.cache
+C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\C#\obj\Debug\App.g.cs
+C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\C#\obj\Debug\Projeto_PesquisaOrdenacao_WPF_MarkupCompile.cache
+C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\C#\obj\Debug\Projeto_PesquisaOrdenacao_WPF_MarkupCompile.lref
+C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\C#\bin\Debug\Projeto_PesquisaOrdenacao_WPF.exe.config
+C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\C#\bin\Debug\Projeto_PesquisaOrdenacao_WPF.exe
+C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\C#\bin\Debug\Projeto_PesquisaOrdenacao_WPF.pdb
+C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\C#\obj\Debug\Projeto_PesquisaOrdenacao_WPF.g.resources
+C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\C#\obj\Debug\Projeto_PesquisaOrdenacao_WPF.csproj.GenerateResource.cache
+C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\C#\obj\Debug\Projeto_PesquisaOrdenacao_WPF.csproj.CoreCompileInputs.cache
+C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\C#\obj\Debug\Projeto_PesquisaOrdenacao_WPF.exe
+C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\C#\obj\Debug\Projeto_PesquisaOrdenacao_WPF.pdb
+C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\C#\obj\Debug\MainWindow.g.cs
+C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\C#\obj\Debug\MainWindow.baml
+C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\C#\obj\Debug\PesquisaOrdenacao.Properties.Resources.resources
+C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\C#\obj\Debug\App.baml
