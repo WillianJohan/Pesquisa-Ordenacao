@@ -59,6 +59,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\SearchMethods\MySearchMethod.cs" />
     <Compile Include="Model\SortMethods\Bubble.cs" />
     <Compile Include="Model\SortMethods\Comb.cs" />
     <Compile Include="Model\SortMethods\Insertion.cs" />
