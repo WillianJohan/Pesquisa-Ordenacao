@@ -15,6 +15,8 @@ using System.Windows.Shapes;
 
 namespace Projeto_PesquisaOrdenacao_WPF
 {
+
+    //https://stackoverflow.com/questions/20949742/change-backgorund-of-button-in-wpf-when-it-has-focus -> Botão background foco
     /// <summary>
     /// Interação lógica para MainWindow.xam
     /// </summary>
@@ -23,6 +25,16 @@ namespace Projeto_PesquisaOrdenacao_WPF
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Tabs.SelectedIndex = 1;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Tabs.SelectedIndex = 0;
         }
     }
 }

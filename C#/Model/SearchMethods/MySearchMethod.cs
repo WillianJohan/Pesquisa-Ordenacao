@@ -9,15 +9,15 @@ namespace PesquisaOrdenacao.Model.SearchMethods
     class MySearchMethod
     {
         /*
-         * Algorítimo deve ler arquivo e procurar por palavras
-         * Ler um lbl, texto, String
+         * A interface terá um texto.
+         * Esse texto poderá ser atualizado em tempo real pelo usuário
          * 
-         * 
+         * Terá uma barra de pesquisa onde o usuário irá escrever algo e deverá ser pesqusiado no texto
          */
 
         private string text = null;
         private string word = null;
-
+        
         public string Text { get => text; set => text = value; }
         public string Word { get => word; set => word = value; }
 

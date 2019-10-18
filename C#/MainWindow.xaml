@@ -4,13 +4,45 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projeto_PesquisaOrdenacao_WPF"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="650" Width="1350">
-    <Grid Background="#FF353646">
-        <Grid Height="619" Width="200" Background="#FF0F0D1D" Margin="0,0,1142,0">
-            <Button Content="Setup" HorizontalAlignment="Left" Height="50" Margin="0,203,0,0" VerticalAlignment="Top" Width="200" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="18" FontWeight="Bold" FocusVisualStyle="{DynamicResource ControlStyle1}"/>
-            <Button Content="Resultado" HorizontalAlignment="Left" Height="50" Margin="0,253,0,0" VerticalAlignment="Top" Width="200" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="18" FontWeight="Bold"/>
-            <Button Content="Histórico" HorizontalAlignment="Left" Height="50" Margin="0,303,0,0" VerticalAlignment="Top" Width="200" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="18" FontWeight="Bold"/>
-        </Grid>
+        mc:Ignorable="d"        
+        
+            
+    Title="MainWindow" Height="650" Width="1350">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="7*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Column="0" Grid.Row="0" Background="#FF79749E" Margin="0" VerticalAlignment="Center" >
+            <Button Content="Setup" FocusVisualStyle="{x:Null}" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Background="Transparent" BorderBrush="{x:Null}" Foreground="White" FontSize="18" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="Resultado" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Background="Transparent" BorderBrush="{x:Null}" Foreground="White" FontSize="18" FontWeight="Bold" Click="Button_Click_1"/>
+            <Button Content="Histórico" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Background="Transparent" BorderBrush="{x:Null}" Foreground="White" FontSize="18" FontWeight="Bold"/>
+        </StackPanel>
+        
+        <TabControl 
+            x:Name="Tabs"
+            Grid.Column="1" Grid.Row="0" 
+            VerticalAlignment="Stretch"  
+            HorizontalAlignment="Stretch"           
+            >
+            <TabItem IsEnabled="False">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Test 1" />
+
+                </Grid>
+            </TabItem>
+            <TabItem IsEnabled="False">
+                <Grid Background="#FFE5E5E5">
+
+                    <Label Content="Test 2" />
+
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
