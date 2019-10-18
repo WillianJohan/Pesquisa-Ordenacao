@@ -7,7 +7,6 @@ C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\C#\bin\Debug\Projeto_Pesqu
 C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\C#\bin\Debug\Projeto_PesquisaOrdenacao_WPF.pdb
 C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\C#\obj\Debug\Projeto_PesquisaOrdenacao_WPF.g.resources
 C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\C#\obj\Debug\Projeto_PesquisaOrdenacao_WPF.csproj.GenerateResource.cache
-C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\C#\obj\Debug\Projeto_PesquisaOrdenacao_WPF.csproj.CoreCompileInputs.cache
 C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\C#\obj\Debug\Projeto_PesquisaOrdenacao_WPF.exe
 C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\C#\obj\Debug\Projeto_PesquisaOrdenacao_WPF.pdb
 C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\C#\obj\Debug\MainWindow.g.cs
