@@ -1,24 +1,21 @@
 # UFN_PesquisaOrdenacao
 
-Nesse repositório pretendo implementar os principais métodos de ordenação.
-São eles: 
-- InsertionSort
-- SelectionSort
-- BubbleSort
-- ShakeSort
-- CombSort
-- ShellSort
-- MergeSort
-- QuickSort
-- Entre outros...
+Disciplina de Pesquisa e ordenação.
+Linguagem: C#
 
-Terá um gerador de numeros aleatórios definido um range e quantidade que o usuário decidir.
-Após os numeros serem gerados, serão gravados em um arquivo para a amostra gerada, ser utilizada por todos os metodos de ordenação e gerar resultados mais precisos.
+Descrição:
+- Neste projeto, foi colocado alguns dos principais métodos de ordenação para ajudar a comparar qual método é melhor utilizando amostras de números que o próprio usuário poderar inserir.
+- Também possui metodo de pesquisa mas ainda nao está implementado.
 
-Com o tempo, o reposirório será implementado aos poucos com o resultado final tendo uma interface gráfica para mostrar melhor as comparações dos resultados.
+---
+#### Métodos de ordenação implementados:
 
-Extra: Se possível, implementar os metodos nas seguintes linguagens
-- C++
-- Java
+- Bubble
+- Comb
+- Insertion
+- Merge
+- Quick
+- Selection
+- Shake
+- Shell
 
-Ao final da implementação, fazer a ordenação em cada linguagem e salvar os resultados igual em C# para comparar o desempenho entre as linguagens.
