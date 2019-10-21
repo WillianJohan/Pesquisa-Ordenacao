@@ -1,1 +1,0 @@
-######Esta pasta irá conter o(s) codigo(s) referente a geração de numeros para ser usado futuramente.
