@@ -1,0 +1,10 @@
+C:\Users\Johan\Desktop\TrabalhoPesquisa\TrabalhoPesquisa\obj\Debug\TrabalhoPesquisa.csprojAssemblyReference.cache
+C:\Users\Johan\Desktop\TrabalhoPesquisa\TrabalhoPesquisa\obj\Debug\TrabalhoPesquisa.Form1.resources
+C:\Users\Johan\Desktop\TrabalhoPesquisa\TrabalhoPesquisa\obj\Debug\TrabalhoPesquisa.Properties.Resources.resources
+C:\Users\Johan\Desktop\TrabalhoPesquisa\TrabalhoPesquisa\obj\Debug\TrabalhoPesquisa.csproj.GenerateResource.cache
+C:\Users\Johan\Desktop\TrabalhoPesquisa\TrabalhoPesquisa\obj\Debug\TrabalhoPesquisa.csproj.CoreCompileInputs.cache
+C:\Users\Johan\Desktop\TrabalhoPesquisa\TrabalhoPesquisa\bin\Debug\TrabalhoPesquisa.exe.config
+C:\Users\Johan\Desktop\TrabalhoPesquisa\TrabalhoPesquisa\bin\Debug\TrabalhoPesquisa.exe
+C:\Users\Johan\Desktop\TrabalhoPesquisa\TrabalhoPesquisa\bin\Debug\TrabalhoPesquisa.pdb
+C:\Users\Johan\Desktop\TrabalhoPesquisa\TrabalhoPesquisa\obj\Debug\TrabalhoPesquisa.exe
+C:\Users\Johan\Desktop\TrabalhoPesquisa\TrabalhoPesquisa\obj\Debug\TrabalhoPesquisa.pdb
