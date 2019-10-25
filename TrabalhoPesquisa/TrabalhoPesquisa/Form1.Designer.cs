@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.caixaDePesquisa = new System.Windows.Forms.TextBox();
             this.lbl_Resultados = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,12 +97,23 @@
             this.lbl_Resultados.TabIndex = 5;
             this.lbl_Resultados.Text = "Resultados: 289";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(265, 101);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(72, 30);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(936, 709);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbl_Resultados);
             this.Controls.Add(this.caixaDePesquisa);
             this.Controls.Add(this.label2);
@@ -124,6 +136,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox caixaDePesquisa;
         private System.Windows.Forms.Label lbl_Resultados;
+        private System.Windows.Forms.Button button1;
     }
 }
 
