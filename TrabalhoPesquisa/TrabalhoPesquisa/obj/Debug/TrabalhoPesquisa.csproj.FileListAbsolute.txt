@@ -17,3 +17,13 @@ C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\TrabalhoPesquisa\TrabalhoP
 C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\TrabalhoPesquisa\TrabalhoPesquisa\obj\Debug\TrabalhoPesquisa.csproj.GenerateResource.cache
 C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\TrabalhoPesquisa\TrabalhoPesquisa\obj\Debug\TrabalhoPesquisa.exe
 C:\Users\19123\Documents\GitHub\UFN_PesquisaOrdenacao\TrabalhoPesquisa\TrabalhoPesquisa\obj\Debug\TrabalhoPesquisa.pdb
+C:\Users\Johan\Documents\GitHub\UFN_PesquisaOrdenacao\TrabalhoPesquisa\TrabalhoPesquisa\obj\Debug\TrabalhoPesquisa.csprojAssemblyReference.cache
+C:\Users\Johan\Documents\GitHub\UFN_PesquisaOrdenacao\TrabalhoPesquisa\TrabalhoPesquisa\obj\Debug\TrabalhoPesquisa.Properties.Resources.resources
+C:\Users\Johan\Documents\GitHub\UFN_PesquisaOrdenacao\TrabalhoPesquisa\TrabalhoPesquisa\obj\Debug\TrabalhoPesquisa.csproj.GenerateResource.cache
+C:\Users\Johan\Documents\GitHub\UFN_PesquisaOrdenacao\TrabalhoPesquisa\TrabalhoPesquisa\obj\Debug\TrabalhoPesquisa.csproj.CoreCompileInputs.cache
+C:\Users\Johan\Documents\GitHub\UFN_PesquisaOrdenacao\TrabalhoPesquisa\TrabalhoPesquisa\obj\Debug\TrabalhoPesquisa.exe
+C:\Users\Johan\Documents\GitHub\UFN_PesquisaOrdenacao\TrabalhoPesquisa\TrabalhoPesquisa\obj\Debug\TrabalhoPesquisa.pdb
+C:\Users\Johan\Documents\GitHub\UFN_PesquisaOrdenacao\TrabalhoPesquisa\TrabalhoPesquisa\bin\Debug\TrabalhoPesquisa.exe.config
+C:\Users\Johan\Documents\GitHub\UFN_PesquisaOrdenacao\TrabalhoPesquisa\TrabalhoPesquisa\bin\Debug\TrabalhoPesquisa.exe
+C:\Users\Johan\Documents\GitHub\UFN_PesquisaOrdenacao\TrabalhoPesquisa\TrabalhoPesquisa\bin\Debug\TrabalhoPesquisa.pdb
+C:\Users\Johan\Documents\GitHub\UFN_PesquisaOrdenacao\TrabalhoPesquisa\TrabalhoPesquisa\obj\Debug\TrabalhoPesquisa.TelaDePesquisa.resources
