@@ -15,7 +15,8 @@ namespace PesquisaOrdenacao.Model
 		}
 
 		public string getStatistic(){
-			return methodName+";"+time+";"+comparations+";"+exchanges;
+			return methodName + "\n....Time: " + time + "\n....Comparations: " + comparations + "\n\t....Exchanges: " + exchanges + "\n";
+			//return methodName+";"+time+";"+comparations+";"+exchanges;
 		}
 	}
 }
