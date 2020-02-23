@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 namespace PesquisaOrdenacao.Model
 {
-    public abstract class Sort
+    public abstract class Sort : ISort
     {
         //Read all the numbers and add to the list
         private string methodName = "";
