@@ -11,7 +11,7 @@ namespace PesquisaOrdenacao.Model.SortMethods
         protected override void StartSorter()
         {
             int i;
-            double distancia = vetor.Count;
+            double distancia = listOfUnsortedNumbers.Count;
             int aux;
             bool houveTroca;
             do
@@ -20,13 +20,13 @@ namespace PesquisaOrdenacao.Model.SortMethods
                 if (distancia < 1) distancia = 1; //significa que virou bolha
                 //Console.WriteLine(distancia);
                 houveTroca = false;
-                for (i = 0; i + distancia < vetor.Count; i++)
+                for (i = 0; i + distancia < listOfUnsortedNumbers.Count; i++)
                 {
-                    if (vetor[i] > vetor[i + (int) distancia])
+                    if (listOfUnsortedNumbers[i] > listOfUnsortedNumbers[i + (int) distancia])
                     {
-                        aux = vetor[i];
-                        vetor[i] = vetor[i + (int) distancia];
-                        vetor[i + (int) distancia] = aux;
+                        aux = listOfUnsortedNumbers[i];
+                        listOfUnsortedNumbers[i] = listOfUnsortedNumbers[i + (int) distancia];
+                        listOfUnsortedNumbers[i + (int) distancia] = aux;
                         houveTroca = true;
                         exchanges++;
                     }

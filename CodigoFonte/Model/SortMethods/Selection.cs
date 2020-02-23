@@ -12,23 +12,23 @@ namespace PesquisaOrdenacao.Model.SortMethods
             int smallest_Index = 0;
             int i, j;
 
-            for (i = 0; i < vetor.Count; i++)
+            for (i = 0; i < listOfUnsortedNumbers.Count; i++)
             {
                 smallest_Index = i;
-                for (j = i + 1; j < vetor.Count; j++)
+                for (j = i + 1; j < listOfUnsortedNumbers.Count; j++)
                 {
                     comparisons++;
-                    if (vetor[j] < vetor[smallest_Index])
+                    if (listOfUnsortedNumbers[j] < listOfUnsortedNumbers[smallest_Index])
                     {
                         smallest_Index = j;
                     }
                 }
-                if (vetor[smallest_Index] != vetor[i])
+                if (listOfUnsortedNumbers[smallest_Index] != listOfUnsortedNumbers[i])
                 {
                     exchanges++;
-                    int aux = vetor[smallest_Index];
-                    vetor[smallest_Index] = vetor[i];
-                    vetor[i] = aux;
+                    int aux = listOfUnsortedNumbers[smallest_Index];
+                    listOfUnsortedNumbers[smallest_Index] = listOfUnsortedNumbers[i];
+                    listOfUnsortedNumbers[i] = aux;
                 }
             }
         }

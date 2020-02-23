@@ -12,17 +12,17 @@ namespace PesquisaOrdenacao.Model.SortMethods
             int aux;
             int i, j;
 
-            for (i = 1; i < vetor.Count; i++)
+            for (i = 1; i < listOfUnsortedNumbers.Count; i++)
             {
-                aux = vetor[i];
-                for (j = i - 1; j >= 0 && vetor[j] > aux; j--)
+                aux = listOfUnsortedNumbers[i];
+                for (j = i - 1; j >= 0 && listOfUnsortedNumbers[j] > aux; j--)
                 {
                     // move the entire collection to the right
-                    vetor[j + 1] = vetor[j];
+                    listOfUnsortedNumbers[j + 1] = listOfUnsortedNumbers[j];
                     comparisons++;
                     exchanges++;
                 }
-                vetor[j + 1] = aux;
+                listOfUnsortedNumbers[j + 1] = aux;
                 comparisons++;
                 exchanges++;
             }

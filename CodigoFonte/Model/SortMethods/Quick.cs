@@ -11,7 +11,7 @@ namespace PesquisaOrdenacao.Model.SortMethods
 
         protected override void StartSorter()
         {
-            vetor = quicksort(vetor);
+            listOfUnsortedNumbers = quicksort(listOfUnsortedNumbers);
         }
 
         private List<int> quicksort(List<int> unsorted)

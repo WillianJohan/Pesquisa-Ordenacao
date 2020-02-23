@@ -13,7 +13,7 @@ namespace PesquisaOrdenacao.Model.SortMethods
 
         protected override void StartSorter()
         {
-            vetor = mergeSort(vetor);
+            listOfUnsortedNumbers = mergeSort(listOfUnsortedNumbers);
         }
 
         private List<int> mergeSort(List<int> unsorted)

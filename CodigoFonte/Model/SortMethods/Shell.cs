@@ -15,21 +15,21 @@ namespace PesquisaOrdenacao.Model.SortMethods
             do
             {
                 distancia = 3 * distancia + 1;
-            } while (distancia < vetor.Count);
+            } while (distancia < listOfUnsortedNumbers.Count);
 
             do
             {
                 distancia = (int)distancia / 3;
-                for (i = distancia; i < vetor.Count; i++)
+                for (i = distancia; i < listOfUnsortedNumbers.Count; i++)
                 {
-                    aux = vetor[i];
-                    for (j = i - distancia; j >= 0 && aux < vetor[j]; j = j - distancia)
+                    aux = listOfUnsortedNumbers[i];
+                    for (j = i - distancia; j >= 0 && aux < listOfUnsortedNumbers[j]; j = j - distancia)
                     {
-                        vetor[j + distancia] = vetor[j];
+                        listOfUnsortedNumbers[j + distancia] = listOfUnsortedNumbers[j];
                         comparisons++;
                         exchanges++;
                     }
-                    vetor[j + distancia] = aux;
+                    listOfUnsortedNumbers[j + distancia] = aux;
                     exchanges++;
                 }
             } while (distancia > 1);
