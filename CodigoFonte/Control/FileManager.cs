@@ -4,12 +4,16 @@ using PesquisaOrdenacao.Model;
 
 namespace PesquisaOrdenacao.Control
 {
-	public static class FileManager
-	{        
-        //Path
+    /// <summary>
+    /// This class records and read unsorted numbers and statistics results.
+    /// </summary>
+    public static class FileManager
+	{
+        //paths for file creation
         private static string path_Statistics = "MyStatistic.txt";
         private static string path_UnsortedNumbers = "unsortedNumbers.txt";
 
+        //Getter and Setter of unsorted numbers archive path
         public static string Path_UnsortedNumbers { get => path_UnsortedNumbers; set => path_UnsortedNumbers = value; }
 
         public static void RecordStatics(List<Statistic> statistics)
