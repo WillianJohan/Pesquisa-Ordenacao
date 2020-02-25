@@ -1,9 +1,8 @@
 ﻿using PesquisaOrdenacao.Control;
-using PesquisaOrdenacao.Model.SearchMethods;
+using PesquisaOrdenacao.Model;
 using PesquisaOrdenacao.Model.SortMethods;
 using System;
-using System.Management;
-using System.Runtime.InteropServices;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -13,25 +12,15 @@ namespace Projeto_PesquisaOrdenacao_WPF
 
     public partial class MainWindow : Window
     {
-        //Indices para as respectivas janelas
-        private readonly int TAB_ORDENACAO = 0;
-        private readonly int TAB_SETUP_ORDENACAO = 1;
-        private readonly int TAB_HISTORICO = 2;
-        private readonly int TAB_GRAFICO = 3;
-        private readonly int TAB_ORDENANDO = 4;
-        private readonly int TAB_PESQUISA = 5;
-        
-
         private int numerosParaGerar = 0;
-        private string textoDaPesquisa = null;
-        MySearchMethod pesquisa = null;
+        private List<Statistic> listOfStatistics;
 
         public MainWindow()
         {
             InitializeComponent();
         }
-    // Metodos
-    private int AmoutCheckBoxSelected
+        
+        private int AmoutCheckBoxSelected
         {
             get
             {
@@ -53,10 +42,16 @@ namespace Projeto_PesquisaOrdenacao_WPF
             int progresso = 0;
             int methodsLengh = AmoutCheckBoxSelected;
 
+            Console.WriteLine("Lengh OK");
+
             //Gera os numeros aleatórios            
             atualizarProgresso(progresso, methodsLengh, "Gerando Numeros");
+            Console.WriteLine("Atuializou progresso");
+
             SorterSetup.setup(numerosParaGerar);
-            
+            listOfStatistics = new List<Statistic>();
+            Console.WriteLine("gerou numeros");
+
             if (cb_BubbleSort.IsChecked == true)
             {                
                 Bubble bubble = new Bubble();
@@ -64,6 +59,7 @@ namespace Projeto_PesquisaOrdenacao_WPF
                 atualizarProgresso(progresso, methodsLengh, bubble.MethodName);
                 bubble.sort();
                 bubble.Record();
+                listOfStatistics.Add(bubble.getStatistics());
             }
             if (cb_CombSort.IsChecked == true)
             {
@@ -72,6 +68,7 @@ namespace Projeto_PesquisaOrdenacao_WPF
                 atualizarProgresso(progresso, methodsLengh, comb.MethodName);
                 comb.sort();
                 comb.Record();
+                listOfStatistics.Add(comb.getStatistics());
             }
             if (cb_InsertionSort.IsChecked == true)
             {
@@ -80,6 +77,7 @@ namespace Projeto_PesquisaOrdenacao_WPF
                 atualizarProgresso(progresso, methodsLengh, insertion.MethodName);
                 insertion.sort();
                 insertion.Record();
+                listOfStatistics.Add(insertion.getStatistics());
             }
             if (cb_MergeSort.IsChecked == true)
             {
@@ -88,6 +86,7 @@ namespace Projeto_PesquisaOrdenacao_WPF
                 atualizarProgresso(progresso, methodsLengh, merge.MethodName);
                 merge.sort();
                 merge.Record();
+                listOfStatistics.Add(merge.getStatistics());
             }
             if (cb_QuickSort.IsChecked == true)
             {
@@ -96,6 +95,7 @@ namespace Projeto_PesquisaOrdenacao_WPF
                 atualizarProgresso(progresso, methodsLengh, quick.MethodName);
                 quick.sort();
                 quick.Record();
+                listOfStatistics.Add(quick.getStatistics());
             }
             if (cb_SelectionSort.IsChecked == true)
             {
@@ -104,6 +104,7 @@ namespace Projeto_PesquisaOrdenacao_WPF
                 atualizarProgresso(progresso, methodsLengh, selection.MethodName);
                 selection.sort();
                 selection.Record();
+                listOfStatistics.Add(selection.getStatistics());
             }
             if (cb_ShakeSort.IsChecked == true)
             {
@@ -112,6 +113,7 @@ namespace Projeto_PesquisaOrdenacao_WPF
                 atualizarProgresso(progresso, methodsLengh, shake.MethodName);
                 shake.sort();
                 shake.Record();
+                listOfStatistics.Add(shake.getStatistics());
             }
             if (cb_ShellSort.IsChecked == true)
             {
@@ -120,66 +122,41 @@ namespace Projeto_PesquisaOrdenacao_WPF
                 atualizarProgresso(progresso, methodsLengh, shell.MethodName);
                 shell.sort();
                 shell.Record();
+                listOfStatistics.Add(shell.getStatistics());
             }
 
-            atualizarProgresso(progresso, methodsLengh, "Ordenação Concluiía!!");
-            button_Ordenacao.IsEnabled = true;
-            button_Pesquisa.IsEnabled = true;
-            button_VerEstatisticas.IsEnabled = true;
-        }
-
-
-
-        private void atualizarProgresso(int atual, int total, string nomeMetodo)
-        {
-            barraProgresso.Value = (atual * 100) / total;
-            lbl_TitleOrdenando.Content = "ORDENANDO!" + "(" + atual + "/" + total + ")";
-            if (nomeMetodo == null) return;
-            lbl_MetodoEmExecucao.Content = nomeMetodo;
-            if (txtBlock_ListaProgresso.Text.Length > 0)
-            {
-                int previousText = txtBlock_ListaProgresso.Text.IndexOf("Em Andamento", 0);
-                txtBlock_ListaProgresso.Text = txtBlock_ListaProgresso.Text.Substring(0, previousText) + "(OK)\n";
-                if (nomeMetodo.Equals("Ordenação Concluiía!!"))
-                {
-                    txtBlock_ListaProgresso.Text += "===== " + nomeMetodo + "=====";
-                    return;
-                }
-            }
-            txtBlock_ListaProgresso.Text += nomeMetodo + "..... \tEm Andamento\n";
-        }
-
-        // ================ BOTOES DO MENU SUPERIOR ============================== //
-        private void Ordenacao_ButtonClicked(object sender, RoutedEventArgs e)
-        {
-            Tabs.SelectedIndex = TAB_ORDENACAO;
-        }
-
-        private void Pesquisa_ButtonClicked(object sender, RoutedEventArgs e)
-        {
-            Tabs.SelectedIndex = TAB_PESQUISA;
-            pesquisa = new MySearchMethod();
+            //Finaliza o método.
+            atualizarProgresso(progresso, methodsLengh, "null");
         }
 
         // ================================== BOTOES E COMPONENTES DAS TELAS ===================================//
-        // PESQUISA ==========================================================================================//
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        
+            //Update the progress in TextBlock
+        private void atualizarProgresso(int atual, int total, string nomeMetodo)
         {
-            //Content de caixa de texto mudou
-            textoDaPesquisa = MyTxtBox.Text;
+            lbl_TitleStatus.Content = $"Ordenando! ({atual}/{total})";
+            barraProgresso.Value = (atual * 100) / total;
+            
+            if (nomeMetodo == null) return;
+            lbl_StatusProgress.Content = $"Método em Execução: {nomeMetodo}"; // Repensar nessa atribuição
+
+            if (txtBlock_log.Text.Length > 0) //Check if the text box has something.
+            {
+                int previousText = txtBlock_log.Text.IndexOf("Em Andamento", 0); //Search for "Em Andamento" text index.
+                txtBlock_log.Text = txtBlock_log.Text.Substring(0, previousText) + "(OK)\n";               
+                
+                if (nomeMetodo.Equals("null"))
+                {
+                    txtBlock_log.Text += "\n===== Ordenação Concluiía!! =====\n\n";
+                    txtBlock_log.Text += $"Amostra original: {numerosParaGerar} numeros desordenados de 0 a 1000\n";
+                    foreach (Statistic info in listOfStatistics) txtBlock_log.Text += info.getStatistic();
+                    return;
+                }
+            }
+            txtBlock_log.Text += nomeMetodo + "..... \tEm Andamento\n";
         }
 
-        private void Pesquisa_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            MyTxtBox.Text = pesquisa.filter(textoDaPesquisa, txt_Pesquisa.Text);            
-        }
-
-
-
-        // ORDENACAO ========================================================================== //
-        private void SetupOrdenacao_ButtonClick(object sender, RoutedEventArgs e){  Tabs.SelectedIndex = TAB_SETUP_ORDENACAO;   }
-        private void Historico_ButtonClick(object sender, RoutedEventArgs e){       Tabs.SelectedIndex = TAB_HISTORICO;         }
-        private void Grafico_ButtonClick(object sender, RoutedEventArgs e){         Tabs.SelectedIndex = TAB_GRAFICO;           }
+        //Check if the user write letter in txtBox
         private void OnlyNumbers_KeyUp(object sender, TextChangedEventArgs e)
         {
             if (System.Text.RegularExpressions.Regex.IsMatch(N_ToGenerate.Text, "[^0-9]"))
@@ -189,20 +166,25 @@ namespace Projeto_PesquisaOrdenacao_WPF
             }
         }
 
-        //SetupOrdenacao ========================================================================//
+        //Start sort process
         private void Button_GerarNumerosOrdenar(object sender, RoutedEventArgs e)
         {
             int.TryParse(N_ToGenerate.Text, out numerosParaGerar);
             if (numerosParaGerar <= 0) MessageBox.Show("Digite a quantidade de numeros desejada para ordenar que seja maior que zero!");
             if (AmoutCheckBoxSelected == 0) MessageBox.Show("Selecione ao menos UM metodo de ordenação!!");
-            Tabs.SelectedIndex = TAB_ORDENANDO;
-            button_Ordenacao.IsEnabled = false;
-            button_Pesquisa.IsEnabled = false;
+            GerarOrdenarNumeros(); //Iniciar nova thread
         }
 
-        private void TxtBox_GotFocus(object sender, RoutedEventArgs e)
+        private void Button_ResetProgress(object sender, RoutedEventArgs e)
         {
-            MyTxtBox.Text = textoDaPesquisa;
+            //Titulo: Status
+            lbl_TitleStatus.Content = "Status";
+            //Status: Esperando a seleção dos metodos
+            lbl_StatusProgress.Content = "Esperando a seleção dos métodos.";
+            //Limpa o bloco de texto
+            txtBlock_log.Text = null;
+            //Zera barra de progresso
+            barraProgresso.Value = 0;
         }
     }
 }
