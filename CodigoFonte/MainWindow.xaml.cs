@@ -2,12 +2,12 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Collections.Generic;
-using PesquisaOrdenacao.Control;
-using PesquisaOrdenacao.Model;
-using PesquisaOrdenacao.Model.SortMethods;
+using Ordenacao.Control;
+using Ordenacao.Model;
+using Ordenacao.Model.SortMethods;
 
 
-namespace Projeto_PesquisaOrdenacao_WPF
+namespace Projeto_Ordenacao_WPF
 {
 
     public partial class MainWindow : Window

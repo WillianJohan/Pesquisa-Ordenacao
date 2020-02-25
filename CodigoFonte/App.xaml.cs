@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Projeto_PesquisaOrdenacao_WPF
+namespace Projeto_Ordenacao_WPF
 {
     /// <summary>
     /// Interação lógica para App.xaml

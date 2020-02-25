@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace PesquisaOrdenacao.Model.SortMethods
+namespace Ordenacao.Model.SortMethods
 {
     public class Merge : Sort
     {

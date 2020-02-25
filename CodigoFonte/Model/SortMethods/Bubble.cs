@@ -1,4 +1,4 @@
-namespace PesquisaOrdenacao.Model.SortMethods
+namespace Ordenacao.Model.SortMethods
 {
     public class Bubble : Sort
     {

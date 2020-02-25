@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace PesquisaOrdenacao.Model.SortMethods
+namespace Ordenacao.Model.SortMethods
 {
     class Quick : Sort
     {

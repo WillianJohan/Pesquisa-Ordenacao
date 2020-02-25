@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace PesquisaOrdenacao.Control
+namespace Ordenacao.Control
 {
     /// <summary>
     /// Responsable to generate randon numbers and save to a file called "UnsortedNumbers.txt". 

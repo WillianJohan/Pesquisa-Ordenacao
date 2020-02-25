@@ -1,4 +1,4 @@
-namespace PesquisaOrdenacao.Model
+namespace Ordenacao.Model
 {
 	public class Statistic
 	{	

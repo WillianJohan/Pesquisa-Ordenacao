@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PesquisaOrdenacao.Properties {
+namespace Ordenacao.Properties {
     using System;
     
     

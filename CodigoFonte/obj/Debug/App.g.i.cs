@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using Projeto_PesquisaOrdenacao_WPF;
+using Projeto_Ordenacao_WPF;
 using System;
 using System.Diagnostics;
 using System.Windows;
@@ -32,7 +32,7 @@ using System.Windows.Shapes;
 using System.Windows.Shell;
 
 
-namespace Projeto_PesquisaOrdenacao_WPF {
+namespace Projeto_Ordenacao_WPF {
     
     
     /// <summary>
@@ -74,7 +74,7 @@ namespace Projeto_PesquisaOrdenacao_WPF {
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.0.0.0")]
         public static void Main() {
-            Projeto_PesquisaOrdenacao_WPF.App app = new Projeto_PesquisaOrdenacao_WPF.App();
+            Projeto_Ordenacao_WPF.App app = new Projeto_Ordenacao_WPF.App();
             app.InitializeComponent();
             app.Run();
         }

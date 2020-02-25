@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.IO;
-using PesquisaOrdenacao.Model;
+using Ordenacao.Model;
 
-namespace PesquisaOrdenacao.Control
+namespace Ordenacao.Control
 {
     /// <summary>
     /// This class records and read unsorted numbers and statistics results.

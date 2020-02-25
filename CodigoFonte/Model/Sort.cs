@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace PesquisaOrdenacao.Model
+namespace Ordenacao.Model
 {
     public abstract class Sort : ISort
     {
