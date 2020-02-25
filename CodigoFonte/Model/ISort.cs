@@ -11,6 +11,7 @@ namespace PesquisaOrdenacao.Model
         void sort();
         void setupList();
         void Record();
+        string getMethodName();
         Statistic getStatistics();        
     }
 }

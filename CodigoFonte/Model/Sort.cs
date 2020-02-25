@@ -46,5 +46,10 @@ namespace PesquisaOrdenacao.Model
         }
 
         protected abstract void StartSorter();
+
+        public string getMethodName()
+        {
+            return MethodName;
+        }
     }
 }

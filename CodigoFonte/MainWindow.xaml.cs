@@ -1,10 +1,10 @@
-﻿using PesquisaOrdenacao.Control;
-using PesquisaOrdenacao.Model;
-using PesquisaOrdenacao.Model.SortMethods;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
+using System.Collections.Generic;
+using PesquisaOrdenacao.Control;
+using PesquisaOrdenacao.Model;
+using PesquisaOrdenacao.Model.SortMethods;
 
 
 namespace Projeto_PesquisaOrdenacao_WPF
@@ -18,120 +18,56 @@ namespace Projeto_PesquisaOrdenacao_WPF
         public MainWindow()
         {
             InitializeComponent();
-        }
-        
-        private int AmoutCheckBoxSelected
+        }        
+
+        //Get All the sorter methods selected by User.
+        private List<ISort> getAllSorterMethods()
         {
-            get
-            {
-                int i = 0;
-                if (cb_BubbleSort.IsChecked == true) i++;
-                if (cb_CombSort.IsChecked == true) i++;
-                if (cb_InsertionSort.IsChecked == true) i++;
-                if (cb_MergeSort.IsChecked == true) i++;
-                if (cb_QuickSort.IsChecked == true) i++;
-                if (cb_SelectionSort.IsChecked == true) i++;
-                if (cb_ShakeSort.IsChecked == true) i++;
-                if (cb_ShellSort.IsChecked == true) i++;
-                return i;
-            }
+            List <ISort> allSelectedMethods = new List<ISort>();
+            if ((bool)cb_BubbleSort.IsChecked)      allSelectedMethods.Add(new Bubble());
+            if ((bool)cb_CombSort.IsChecked)        allSelectedMethods.Add(new Comb());
+            if ((bool)cb_InsertionSort.IsChecked)   allSelectedMethods.Add(new Insertion());
+            if ((bool)cb_MergeSort.IsChecked)       allSelectedMethods.Add(new Merge());
+            if ((bool)cb_QuickSort.IsChecked)       allSelectedMethods.Add(new Quick());
+            if ((bool)cb_SelectionSort.IsChecked)   allSelectedMethods.Add(new Selection());
+            if ((bool)cb_ShakeSort.IsChecked)       allSelectedMethods.Add(new Shake());
+            if ((bool)cb_ShellSort.IsChecked)       allSelectedMethods.Add(new Shell());
+
+            return allSelectedMethods;
         }
+
 
         private void GerarOrdenarNumeros()
         {
-            int progresso = 0;
-            int methodsLengh = AmoutCheckBoxSelected;
+            //Get All methods
+            List<ISort> sorterMethods = getAllSorterMethods();
 
-            Console.WriteLine("Lengh OK");
+            int currentIndexMethod = 0;
+            int totalMethods = sorterMethods.Count;
 
-            //Gera os numeros aleatórios            
-            atualizarProgresso(progresso, methodsLengh, "Gerando Numeros");
-            Console.WriteLine("Atuializou progresso");
-
-            SorterSetup.setup(numerosParaGerar);
+            //Instantiate a new list of all sorter methods information
             listOfStatistics = new List<Statistic>();
-            Console.WriteLine("gerou numeros");
-
-            if (cb_BubbleSort.IsChecked == true)
-            {                
-                Bubble bubble = new Bubble();
-                progresso++;
-                atualizarProgresso(progresso, methodsLengh, bubble.MethodName);
-                bubble.sort();
-                bubble.Record();
-                listOfStatistics.Add(bubble.getStatistics());
-            }
-            if (cb_CombSort.IsChecked == true)
+            
+            //Update progress "Generating random Numbers."
+            atualizarProgresso(currentIndexMethod, totalMethods, "Gerando Numeros");
+            SorterSetup.setup(numerosParaGerar);
+            
+            //Foreach method it will update progress and execute the sorter.
+            foreach(ISort sortMethod in sorterMethods) 
             {
-                Comb comb = new Comb();
-                progresso++;
-                atualizarProgresso(progresso, methodsLengh, comb.MethodName);
-                comb.sort();
-                comb.Record();
-                listOfStatistics.Add(comb.getStatistics());
+                currentIndexMethod++;
+                atualizarProgresso(currentIndexMethod, totalMethods, sortMethod.getMethodName());
+                sortMethod.sort();
+                listOfStatistics.Add(sortMethod.getStatistics());
             }
-            if (cb_InsertionSort.IsChecked == true)
-            {
-                Insertion insertion = new Insertion();
-                progresso++;
-                atualizarProgresso(progresso, methodsLengh, insertion.MethodName);
-                insertion.sort();
-                insertion.Record();
-                listOfStatistics.Add(insertion.getStatistics());
-            }
-            if (cb_MergeSort.IsChecked == true)
-            {
-                Merge merge = new Merge();
-                progresso++;
-                atualizarProgresso(progresso, methodsLengh, merge.MethodName);
-                merge.sort();
-                merge.Record();
-                listOfStatistics.Add(merge.getStatistics());
-            }
-            if (cb_QuickSort.IsChecked == true)
-            {
-                Quick quick = new Quick();
-                progresso++;
-                atualizarProgresso(progresso, methodsLengh, quick.MethodName);
-                quick.sort();
-                quick.Record();
-                listOfStatistics.Add(quick.getStatistics());
-            }
-            if (cb_SelectionSort.IsChecked == true)
-            {
-                Selection selection = new Selection();
-                progresso++;
-                atualizarProgresso(progresso, methodsLengh, selection.MethodName);
-                selection.sort();
-                selection.Record();
-                listOfStatistics.Add(selection.getStatistics());
-            }
-            if (cb_ShakeSort.IsChecked == true)
-            {
-                Shake shake = new Shake();
-                progresso++;
-                atualizarProgresso(progresso, methodsLengh, shake.MethodName);
-                shake.sort();
-                shake.Record();
-                listOfStatistics.Add(shake.getStatistics());
-            }
-            if (cb_ShellSort.IsChecked == true)
-            {
-                Shell shell = new Shell();
-                progresso++;
-                atualizarProgresso(progresso, methodsLengh, shell.MethodName);
-                shell.sort();
-                shell.Record();
-                listOfStatistics.Add(shell.getStatistics());
-            }
-
+            
             //Finaliza o método.
-            atualizarProgresso(progresso, methodsLengh, "null");
+            atualizarProgresso(currentIndexMethod, totalMethods, "null");
         }
 
         // ================================== BOTOES E COMPONENTES DAS TELAS ===================================//
         
-            //Update the progress in TextBlock
+        //Update the progress in TextBlock
         private void atualizarProgresso(int atual, int total, string nomeMetodo)
         {
             lbl_TitleStatus.Content = $"Ordenando! ({atual}/{total})";
@@ -171,7 +107,7 @@ namespace Projeto_PesquisaOrdenacao_WPF
         {
             int.TryParse(N_ToGenerate.Text, out numerosParaGerar);
             if (numerosParaGerar <= 0) MessageBox.Show("Digite a quantidade de numeros desejada para ordenar que seja maior que zero!");
-            if (AmoutCheckBoxSelected == 0) MessageBox.Show("Selecione ao menos UM metodo de ordenação!!");
+            if (getAllSorterMethods().Count == 0) MessageBox.Show("Selecione ao menos UM metodo de ordenação!!");
             GerarOrdenarNumeros(); //Iniciar nova thread
         }
 
