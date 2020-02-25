@@ -108,10 +108,16 @@ namespace Projeto_Ordenacao_WPF
             int.TryParse(N_ToGenerate.Text, out numerosParaGerar);
             if (numerosParaGerar <= 0) MessageBox.Show("Digite a quantidade de numeros desejada para ordenar que seja maior que zero!");
             if (getAllSorterMethods().Count == 0) MessageBox.Show("Selecione ao menos UM metodo de ordenação!!");
-            GerarOrdenarNumeros(); //Iniciar nova thread
+            resetProgress();
+            GerarOrdenarNumeros();
         }
 
         private void Button_ResetProgress(object sender, RoutedEventArgs e)
+        {
+            resetProgress();
+        }
+
+        private void resetProgress()
         {
             //Titulo: Status
             lbl_TitleStatus.Content = "Status";
