@@ -7,33 +7,32 @@
         mc:Ignorable="d"        
         
             
-    Title="MainWindow" Height="650" Width="1350">
+    Title="MainWindow" Height="504" Width="1100">
     <Grid>
 
         <Label Content="Ordenação Setup" HorizontalContentAlignment="Center" FontSize="40" HorizontalAlignment="Left" Height="60" Margin="10,10,0,0" VerticalAlignment="Top" Width="552"/>
         <Label Content="Quantidade de Numeros para Ordenação: " FontSize="18" HorizontalAlignment="Left" Height="36" Margin="29,115,0,0" VerticalAlignment="Top" Width="351"/>
         <TextBox x:Name="N_ToGenerate" Height="36" Margin="385,115,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Text="1000000" FontSize="18" Width="160" HorizontalAlignment="Left" TextChanged="OnlyNumbers_KeyUp" VerticalAlignment="Top"/>
-        <Button Content="Gerar Numeros e Ordenar!" FontSize="18" HorizontalAlignment="Left" Height="53" Margin="10,556,0,0" VerticalAlignment="Top" Width="351" Click="Button_GerarNumerosOrdenar"/>
-        <Button Content="Resetar Progresso!" FontSize="18" HorizontalAlignment="Left" Height="53" Margin="385,556,0,0" VerticalAlignment="Top" Width="160" Click="Button_ResetProgress"/>
+        <Button Content="Gerar Numeros e Ordenar" FontSize="18" HorizontalAlignment="Left" Height="42" Margin="34,346,0,0" VerticalAlignment="Top" Width="511" Click="Button_GerarNumerosOrdenar"/>
+        <Button Content="Cancelar" FontSize="18" HorizontalAlignment="Left" Height="54" Margin="34,393,0,0" VerticalAlignment="Top" Width="511" Click="Button_Cancel"/>
 
         <!-- CheckBox of Sort Methods -->
-        <CheckBox x:Name="cb_InsertionSort" IsChecked="True" Content="InsertionSort" FontSize="18" Margin="29,191,1178,390" RenderTransformOrigin="1.826,-3.103"/>
-        <CheckBox x:Name="cb_SelectionSort" IsChecked="True" Content="SelectionSort" FontSize="18" Margin="165,191,1042,390" RenderTransformOrigin="1.826,-3.103"/>
-        <CheckBox x:Name="cb_BubbleSort" IsChecked="True" Content="BubbleSort" FontSize="18" Margin="301,191,906,390" RenderTransformOrigin="1.826,-3.103"/>
-        <CheckBox x:Name="cb_ShakeSort" IsChecked="True" Content="ShakeSort" FontSize="18" Margin="432,191,776,390" RenderTransformOrigin="1.826,-3.103"/>
-        <CheckBox x:Name="cb_MergeSort" IsChecked="True" Content="Merge Sort" FontSize="18" Margin="29,234,1178,352" RenderTransformOrigin="1.826,-3.103"/>
-        <CheckBox x:Name="cb_ShellSort" IsChecked="True" Content="Shell Sort" FontSize="18" Margin="165,234,1041,352" RenderTransformOrigin="1.826,-3.103"/>
-        <CheckBox x:Name="cb_CombSort" IsChecked="True" Content="CombSort" FontSize="18" Margin="302,234,933,352" RenderTransformOrigin="1.826,-3.103"/>
-        <CheckBox x:Name="cb_QuickSort" IsChecked="True" Content="Quick Sort" FontSize="18" Margin="432,234,793,352" RenderTransformOrigin="1.826,-3.103"/>
+        <CheckBox x:Name="cb_InsertionSort" IsChecked="True" Content="InsertionSort" FontSize="18" Margin="34,207,927,236" RenderTransformOrigin="1.826,-3.103"/>
+        <CheckBox x:Name="cb_SelectionSort" IsChecked="True" Content="SelectionSort" FontSize="18" Margin="165,207,796,236" RenderTransformOrigin="1.826,-3.103"/>
+        <CheckBox x:Name="cb_BubbleSort" IsChecked="True" Content="BubbleSort" FontSize="18" Margin="296,207,670,236" RenderTransformOrigin="1.826,-3.103"/>
+        <CheckBox x:Name="cb_ShakeSort" IsChecked="True" Content="ShakeSort" FontSize="18" Margin="422,207,547,236" RenderTransformOrigin="1.826,-3.103"/>
+        <CheckBox x:Name="cb_MergeSort" IsChecked="True" Content="Merge Sort" FontSize="18" Margin="34,242,927,201" RenderTransformOrigin="1.826,-3.103"/>
+        <CheckBox x:Name="cb_ShellSort" IsChecked="True" Content="Shell Sort" FontSize="18" Margin="165,245,801,201" RenderTransformOrigin="1.826,-3.103"/>
+        <CheckBox x:Name="cb_CombSort" IsChecked="True" Content="CombSort" FontSize="18" Margin="296,245,670,201" RenderTransformOrigin="1.826,-3.103"/>
+        <CheckBox x:Name="cb_QuickSort" IsChecked="True" Content="Quick Sort" FontSize="18" Margin="422,242,547,201" RenderTransformOrigin="1.826,-3.103"/>
 
         <!-- Status -->
-        <Label x:Name="lbl_TitleStatus" Content="Processo..." HorizontalContentAlignment="Center" FontSize="40" HorizontalAlignment="Left" Height="60" Margin="780,10,0,0" VerticalAlignment="Top" Width="552"/>
-        <Label x:Name="lbl_StatusProgress" FontSize="18" Content="Metodo em execução:" HorizontalAlignment="Left" Height="44" Margin="837,107,0,0" VerticalAlignment="Top" Width="366"/>
-        <ProgressBar x:Name="barraProgresso" HorizontalAlignment="Left" Height="20" Margin="837,156,0,0" VerticalAlignment="Top" Width="366"/>
+        <Label x:Name="lbl_TitleStatus" Content="Processo..." HorizontalContentAlignment="Center" FontSize="40" HorizontalAlignment="Left" Height="60" Margin="567,10,0,0" VerticalAlignment="Top" Width="515"/>
+        <Label x:Name="lbl_StatusProgress" FontSize="18" Content="Metodo em execução:" HorizontalAlignment="Left" Height="44" Margin="664,91,0,0" VerticalAlignment="Top" Width="366"/>
+        <ProgressBar x:Name="barraProgresso" HorizontalAlignment="Left" Height="29" Margin="664,140,0,0" VerticalAlignment="Top" Width="366"/>
         <ScrollViewer VerticalScrollBarVisibility="Hidden" 
-                 Width="500" 
-                 HorizontalScrollBarVisibility="Disabled" Margin="780,191,62,46">
-            <TextBlock x:Name="txtBlock_log" HorizontalAlignment="Stretch" VerticalAlignment="Top" Width="Auto" TextWrapping="Wrap" Height="1000"/>
+                 HorizontalScrollBarVisibility="Disabled" Margin="664,191,62,10">
+            <TextBlock x:Name="txtBlock_log" HorizontalAlignment="Stretch" VerticalAlignment="Top" Width="Auto" TextWrapping="Wrap" Height="1030"/>
         </ScrollViewer>
     </Grid>
 </Window>
