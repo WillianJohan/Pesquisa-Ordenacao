@@ -13,8 +13,8 @@
         <Label Content="Ordenação Setup" HorizontalContentAlignment="Center" FontSize="40" HorizontalAlignment="Left" Height="60" Margin="10,10,0,0" VerticalAlignment="Top" Width="552"/>
         <Label Content="Quantidade de Numeros para Ordenação: " FontSize="18" HorizontalAlignment="Left" Height="36" Margin="29,115,0,0" VerticalAlignment="Top" Width="351"/>
         <TextBox x:Name="N_ToGenerate" Height="36" Margin="385,115,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Text="1000000" FontSize="18" Width="160" HorizontalAlignment="Left" TextChanged="OnlyNumbers_KeyUp" VerticalAlignment="Top"/>
-        <Button Content="Gerar Numeros e Ordenar" FontSize="18" HorizontalAlignment="Left" Height="42" Margin="34,346,0,0" VerticalAlignment="Top" Width="511" Click="Button_GerarNumerosOrdenar"/>
-        <Button Content="Cancelar" FontSize="18" HorizontalAlignment="Left" Height="54" Margin="34,393,0,0" VerticalAlignment="Top" Width="511" Click="Button_Cancel"/>
+        <Button x:Name="generateAndStartSorting" Content="Gerar Numeros e Ordenar" FontSize="18" HorizontalAlignment="Left" Height="42" Margin="34,346,0,0" VerticalAlignment="Top" Width="511" Click="Button_GerarNumerosOrdenar"/>
+        <Button x:Name="cancelButton" Content="Cancelar" FontSize="18" HorizontalAlignment="Left" Height="54" Margin="34,393,0,0" VerticalAlignment="Top" Width="511" Click="Button_Cancel"/>
 
         <!-- CheckBox of Sort Methods -->
         <CheckBox x:Name="cb_InsertionSort" IsChecked="True" Content="InsertionSort" FontSize="18" Margin="34,207,927,236" RenderTransformOrigin="1.826,-3.103"/>
